@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>출력할 구구단의 수를 지정해주세요</h1>
+	<form action="gugu" name="form">
+		<label for="dantext">출력할 구구단</label> <input type="text" id="dantext"
+			name="dantext"> <br>
+		<button type="submit">제출</button>
+	</form>
+	<table><tr><td>dan단</td></tr>
+	<tr><td>dan + "*" + i + </td>
+	<td>"+dan1*i + "</td></tr>
+	</table>
+</body>
+</html>

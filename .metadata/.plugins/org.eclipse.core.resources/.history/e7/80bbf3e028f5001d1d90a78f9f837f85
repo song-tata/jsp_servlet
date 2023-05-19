@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Input</title>
+</head>
+<body>
+<form class="wrap" name ="frmLogin" method="get" action="logins">
+		<div class="idwrap">
+			<label for="id">아이디 : </label> <input type="text" id="id" name="user_id">
+		<!-- 서블릿에서 name과 입력된 값을 전달받게 된다. -->
+		</div>
+		<div class="passwordwrap">
+			<label for="password">패스워드 : </label> <input type="text"
+				id="password" name="user_pw">
+		</div>
+		<div>
+			<input type="checkbox" value="java" id="language">자바
+			<input type="checkbox" value="py" id="language">파이선
+			<input type="checkbox" value="web" id="language">웹프
+			<input type="checkbox" value="jsp" id="language">JSP
+		</div>
+		<div>
+		<label for="radiobtn"> 학습 경험: </label>
+			<input type="radio" value="no" id="radiobtn" name ="is">없다.
+			<input type="radio" value="yes" id="radiobtn" name ="is">있다.
+		</div>
+		<div class="buttonwrap">
+			<button type="submit">확인</button>
+			<button type="reset">초기화</button>
+			
+		</div>
+	</form>
+</body>
+</html>
