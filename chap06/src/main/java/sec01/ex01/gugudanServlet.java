@@ -37,12 +37,12 @@ public class gugudanServlet extends HttpServlet {
 		
 		int dan1 = Integer.parseInt(dan);
 		PrintWriter output = response.getWriter();
-		output.append("<html><body><table border = \"2\"><tr><td>"+dan+"단</td></tr>");	
+		output.append("<html><body><table border=1; width=1000;><tr><td colspan=2>"+dan+"단</td></tr>");	
 		
 		for (int i = 1; i < 10; i++) {
 			
-			output.append("<tr><td>"+dan + "*" + i + "</td>");
-			output.append("<td>"+dan1*i + "</td></tr>");
+			output.append("<tr><td style=\"backgrond-color:ibory;\">"+dan + "*" + i + "</td>");
+			output.append("<td align=center style=\"background-color:mint;\">"+dan1*i + "</td></tr>");
 			
 		}
 		

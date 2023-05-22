@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+body {
+    background-color: #ffe6f2;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: #ff007f;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ff007f;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ff007f;
+    border-radius: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+    <div>
+        <h2>My ToDo List</h2>
+        <hr>
+        <div>
+            <input id="item" type="text">
+            <button onclick="addItem()">추가</button>
+        </div>
+        <hr>
+        <ul id="todolist"></ul>
+    </div>
+</body>
+
+<script type="text/javascript">
+
+function addItem() {
+    // 입력한 내용 가져오기
+    let inp = document.getElementById("item").value;
+
+    // 입력값이 없을 경우 알림창 생성
+    if(inp=="" || inp.length == 0){
+        alert("내용 입력 필수!");
+        return;
+    }
+
+    // 추가되는 li 태그 생성
+    let newItem = document.createElement("li");
+    // inp vlaue값이 들어갈 span태그 생성
+    let itemval = document.createElement("span");
+    itemval.textContent = inp;
+    newItem.appendChild(itemval);
+
+    let todoList = document.getElementById("todolist");
+    let firstItem = todoList.firstChild;
+    todoList.insertBefore(newItem, firstItem);
+
+    // 삭제 버튼 생성 및 이벤트 처리
+    let delButton = document.createElement("button");
+    delButton.textContent= "삭제";
+    delButton.addEventListener("click", function(){
+        newItem.remove();
+    });
+    newItem.appendChild(delButton);
+
+    }
+</script>
+</html>
