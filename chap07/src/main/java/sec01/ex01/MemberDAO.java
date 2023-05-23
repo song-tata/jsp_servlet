@@ -61,7 +61,7 @@ public class MemberDAO {
 			Class.forName("com.mysql.jdbc.Driver");
 			
 			// 2.DB 연결
-			con =DriverManager.getConnection(
+			con = DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/my_db?serverTimezone=UTC","root","0000"); 
 			// 3. 쿼리 수행을 위한 스테이트먼트 객체 생성
 			stmt = con.createStatement();

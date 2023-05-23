@@ -68,23 +68,27 @@
 <body>
     <div class="container">
         <h1>회원 가입</h1>
-        <form name="frmMember">
+        <form name="frmMember" action="member6">
             <table>
+               <tr>
+                    <td>회원번호</td>
+                    <td><input type="text" name="custid"></td>
+                </tr>
                 <tr>
                     <td>이름</td>
-                    <td><input type="text" name="id"></td>
-                </tr>
-                <tr>
-                    <td>주민번호</td>
-                    <td><input type="text" name="pwd"></td>
-                </tr>
-                <tr>
-                    <td>주소</td>
                     <td><input type="text" name="name"></td>
                 </tr>
                 <tr>
+                    <td>주민번호</td>
+                    <td><input type="text" name="idnumber"></td>
+                </tr>
+                <tr>
+                    <td>주소</td>
+                    <td><input type="text" name="address"></td>
+                </tr>
+                <tr>
                     <td>핸드폰</td>
-                    <td><input type="text" name="email"></td>
+                    <td><input type="text" name="phone"></td>
                 </tr>
             </table>
             <div class="button-container">
@@ -94,5 +98,20 @@
             <input type="hidden" name="command" value="addMember" />
         </form>
     </div>
+    
+   <script type="text/javascript">
+   	function fn_sendMember() {
+   		var frmMember = document.frmMember;
+   		var custid = frmMember.custid.values;
+   		var idnumber = frmMember.idnumber.values;
+   		var name = frmMember.name.values;
+   		var address = frmMember.address.values;
+   		var phone = frmMember.phone.values;
+   		
+   		frmMember.method = "post";
+		frmMember.action = "member6";
+		frmMember.submit();
+	}
+   </script>
 </body>
 </html>
