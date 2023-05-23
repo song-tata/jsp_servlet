@@ -1,5 +1,6 @@
 package sec03.ex02;
 
+import java.security.PublicKey;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
@@ -44,23 +45,23 @@ public class MemberDAO {
 			// db에 연결되어 있다면
 //			connDB();
 			con = dataFactory.getConnection();
-			String query = "select * from t_member";
+			String query = "select * from customer";
 			pstmt = con.prepareStatement(query);
 			ResultSet rs = pstmt.executeQuery(query);
 			
 			while(rs.next()) {
-				String id = rs.getString("id");
-				String pwd = rs.getString("pwd");
+				Integer custid = rs.getInt("custid");
+				String idnumber = rs.getString("idnumber");
 				String name = rs.getString("name");
-				String email = rs.getString("email");
-				Date joinDate = rs.getDate("joinDate");
+				String address = rs.getString("address");
+				String phone = rs.getString("phone");
 				
 				MemberVO vo = new MemberVO();
-				vo.setId(id);
-				vo.setPwd(pwd);
+				vo.setCustid(custid);;
+				vo.setIdnumber(idnumber);
 				vo.setName(name);
-				vo.setEmail(email);
-				vo.setJoinDate(joinDate);
+				vo.setAddress(address);
+				vo.setPhone(phone);
 				list.add(vo);
 				
 				
@@ -82,25 +83,55 @@ public class MemberDAO {
 	public void addMember(MemberVO memberVO) {
 		try {
 			con = dataFactory.getConnection();
-			String id = memberVO.getId();
-			String pwd = memberVO.getPwd();
+			String query = "insert into customer";
+			
+			
+			Integer custid = memberVO.getCustid();
+			String idnumber = memberVO.getIdnumber();
 			String name = memberVO.getName();
-			String email = memberVO.getEmail();
-			String query = "insert into t_member";
-			query += "(id,pwd,name,email)";
-			query += "values(?,?,?,?)";
+			String address = memberVO.getAddress();
+			String phone = memberVO.getPhone();
+			
+			query += "(custid,idnumber,name,address,phone)";
+			query += "values(?,?,?,?,?)";
+			
 			pstmt = con.prepareStatement(query);
-			pstmt.setString(1, id);
-			pstmt.setString(2, pwd);
+			pstmt.setInt(1, custid);
+			pstmt.setString(2, idnumber);
 			pstmt.setString(3, name);
-			pstmt.setString(4, email);
+			pstmt.setString(4, address);
+			pstmt.setString(5, phone);
 			pstmt.executeUpdate();
 			pstmt.close();
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 		
 	}
-	
+//	public void delMember(int custid) {
+//		try {
+//			con = dataFactory.getConnection();
+//			String query = "delete from customer where custid = ?";
+//			pstmt = con.prepareStatement(query);
+//			pstmt.setInt(1, custid);
+//			pstmt.executeUpdate();
+//			pstmt.close();
+//		} catch (Exception e) {
+//			e.getStackTrace();
+//		}
+//	}
+	public void delMember(int id) {
+        try {
+            con = dataFactory.getConnection();
+            String query = "delete from customer where custid=?";
+            pstmt = con.prepareStatement(query);
+            pstmt.setInt(1, id);
+            pstmt.executeUpdate();
+            pstmt.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

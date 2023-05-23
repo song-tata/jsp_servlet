@@ -161,7 +161,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 	
 	
-      <Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\chap07" path="/chap07" reloadable="true" source="org.eclipse.jst.jee.server:chap07"/></Host>
+      <Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\chap07" path="/chap07" reloadable="true" source="org.eclipse.jst.jee.server:chap07"/><Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\chap08" path="/chap08" reloadable="true" source="org.eclipse.jst.jee.server:chap08"/></Host>
     </Engine>
   </Service>
 </Server>
