@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>login page</title>
+<style type="text/css">
+  body {
+    background-color: #f0fff0;
+  }
+
+  .wrap {
+    background-color: #ccffcc;
+    padding: 20px;
+    width: 300px;
+    margin: auto;
+  }
+
+  .idwrap,
+  .passwordwrap {
+    margin-bottom: 10px;
+    margin: 50px 50px;
+  }
+
+  label {
+    color: #008000;
+    font-weight: bold;
+    display: inline-block;
+    width: 200px;
+    
+  }
+
+  input[type="text"],
+  input[type="button"] {
+    background-color: #f0fff0;
+    border: 1px solid #008000;
+    padding: 5px;
+    color: #008000;
+  }
+input[type="text"]{
+width: 200px;
+
+}
+  input[type="button"]:hover {
+    background-color: #008000;
+    color: #f0fff0;
+    cursor: pointer;
+  }
+
+  .buttonwrap {
+    text-align: center;
+  }
+  #loginbtn{
+   font-size: 18px;
+    padding: 10px 20px;
+    }
+	 
+
+</style>
+</head>
+<body>
+	<!-- action : 이름이 logins 라는 서블릿으로
+	 form의 내용을 get 방식으로 전달한다. -->
+	 
+	<form class="wrap" name ="frmLogin" method="get" action="result2.jsp">
+		<div class="idwrap">
+			<label for="id">아이디 : </label> <input type="text" id="id" name="user_id">
+		</div>
+		<div class="passwordwrap">
+			<label for="password">패스워드 : </label> <input type="text"
+				id="password" name="user_pw">
+		</div>
+		<div class="buttonwrap">
+			<input type="button" onclick="submit()" value="로그인" id = "loginbtn">
+		</div>
+	</form>
+</body>
+
+</html>
