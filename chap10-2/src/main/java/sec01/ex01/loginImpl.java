@@ -23,10 +23,12 @@ public class loginImpl implements HttpSessionListener {
 
     public void sessionCreated(HttpSessionEvent se)  { 
     	System.out.println("세션 생성");
-    	++
+    	++total_user;
     }
 
     public void sessionDestroyed(HttpSessionEvent se)  { 
+    	System.out.println("세션 소멸");
+    	total_user--;
     }
 	
 }
