@@ -20,15 +20,16 @@
 	<!-- Uncomment this to disable session persistence across Tomcat restarts -->
 	<!-- <Manager pathname="" /> -->
 
- <!-- 
+ 
 	<Resource maxWait="-1" maxIdle="20" maxActive="100"
 		auth="Container" name="jdbc/mysql" type="javax.sql.DataSource"
 		driverClassName="com.mysql.jdbc.Driver" username="root"
 		password="0000" url="jdbc:mysql://localhost:3306/my_db"/>
--->
-	<Resource maxWait="-1" maxIdle="20" maxActive="100"
+
+ <!--	<Resource maxWait="-1" maxIdle="20" maxActive="100"
 		auth="Container" name="jdbc/mysql" type="javax.sql.DataSource"
 		driverClassName="com.mysql.jdbc.Driver" username="root"
 		password="0000" url="jdbc:mysql://localhost:3306/madang"/>
+		-->
 
 </Context>
