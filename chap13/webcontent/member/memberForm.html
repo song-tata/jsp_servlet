@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+body {
+	background-color: #FCE4EC;
+	color: #333333;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 20px;
+}
+
+form {
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+	width: 280px;
+	padding: 8px;
+	margin-bottom: 10px;
+	border: 1px solid #FF80AB;
+	border-radius: 4px;
+}
+
+input[type="submit"], input[type="reset"] {
+	background-color: #FF4081;
+	color: #FFFFFF;
+	border: none;
+	padding: 10px 16px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 4px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+	<form action="member.jsp" method="post">
+		<label for="u_na">이름 :</label> <input type="text" name="u_na">
+		<br> <label for="u_pw">비밀번호:</label> <input type="password"
+			name="u_pw"> <br> <input type="submit" value="회원등록">
+		<input type="reset" value="다시입력">
+	</form>
+</body>
+</html>

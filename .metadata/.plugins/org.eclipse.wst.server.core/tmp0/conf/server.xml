@@ -161,7 +161,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 	
 	
-      <Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\chap11" path="/chap11" reloadable="true" source="org.eclipse.jst.jee.server:chap11"/><Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\chap12" path="/chap12" reloadable="true" source="org.eclipse.jst.jee.server:chap12"/></Host>
+      <Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\chap11" path="/chap11" reloadable="true" source="org.eclipse.jst.jee.server:chap11"/><Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\chap12" path="/chap12" reloadable="true" source="org.eclipse.jst.jee.server:chap12"/><Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\chap13" path="/chap13" reloadable="true" source="org.eclipse.jst.jee.server:chap13"/></Host>
     </Engine>
   </Service>
 </Server>
