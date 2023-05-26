@@ -54,4 +54,30 @@ public MemberDAO() {
 		return list;
 	}
 	
+	public void addMember(MemberBean bean) {
+		try {
+			con = dataFactory.getConnection();
+			String query = "INSERT INTO member";
+			
+			Integer num_id = bean.getNum_id();
+			String name = bean.getName();
+			String pwd = bean.getPwd();
+			Timestamp joinDate = bean.getJoinDate();
+			
+			query += "(num_id,name,pwd,joinDate)";
+			query += "values(?,?,?,?)";
+			
+			pstmt = con.prepareStatement(query);
+			pstmt.setInt(1, num_id);
+			pstmt.setString(2, name);
+			pstmt.setString(3, pwd);
+			pstmt.setTimestamp(4, joinDate);
+			pstmt.executeUpdate();
+			pstmt.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 }
