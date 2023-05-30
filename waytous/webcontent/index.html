@@ -7,7 +7,7 @@
 <html lang="ko">
 
 <head>
-	<title>Hyperspace by HTML5 UP</title>
+	<title>WayToUs</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -42,7 +42,7 @@
 		<!-- Intro -->
 		<section id="intro" class="wrapper style1 fullscreen fade-up">
 			<div class="inner">
-				<h1>Title</h1>
+				<h1>WayToUs</h1>
 				<p>
 					서울 내에서 이리저리 자주 돌아다니시나요? <br>사랑하는 사람을 왔다갔다 피곤하게 하기 싫으신가요?<br> 서로 귀가시간이 신경쓰이시나요? <br>이 웹에서 제공하는 기능을 통해 데이트 코스를 짜고 추억을 쌓아보세요!
 				</p>
@@ -59,7 +59,7 @@
 				<div class="content">
 					<div class="inner">
 						<h2>멀리 떨어져있을 때</h2>
-						<p>둘이 30분 이상 걸린다면 이쪽을 이용해보세요! 두분의 위치마다 각각 반경 15km의 원을 그려줍니다!
+						<p>둘이 30분 이상 걸린다면 이쪽을 이용해보세요! 두분의 위치마다 각각 반경 3km의 원을 그려줍니다!
 							두 원이 겹치는 부분에서 놀거리를 찾아보면 좋겠죠?</p>
 						<ul class="actions">
 							<li><a href="generic_1.html" class="button">지도 1</a></li>
@@ -151,15 +151,15 @@
 				</p>
 				<div class="split style1">
 					<section>
-						<form method="post" action="#">
+						<form method="post" action="postbox.jsp">
 							<div class="fields">
 								<div class="field half" style="width: 200px;"></div>
 								<div class="field half">
 									<label for="name">아이디</label>
-									<input type="text" name="name" id="name" />
+									<input type="text" name="u_id" id="name" />
 									<label for="name" style="margin-top: 20px;">비밀번호</label>
-									<input type="text" name="name" id="name" />
-									<a href="postbox.html" class="button fit" style="margin: 20px 0; margin-top: 40px;">로그인</a>
+									<input type="password" name="u_pwd" id="name" />
+									<input type="submit" class="button fit" style="margin: 20px 0; margin-top:40px;" value="로그인">
 									<a href="#" class="button fit" style="margin: 10px 0;">회원가입</a>
 								</div>
 								<div class="field half">
