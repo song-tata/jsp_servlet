@@ -8,7 +8,7 @@
 -->
 <html lang="ko">
 <head>
-	<title>WayToUs<%=request.getParameter("u_id") %></title>
+	<title>WayToUs.<%=request.getParameter("u_id") %></title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
@@ -71,7 +71,7 @@
 					<tfoot>
 						<tr>
 							<td colspan="3"></td>
-							<td><a href="#" class="button">글쓰기</a></td>
+							<td><a href="textbox.jsp" class="button">글쓰기</a></td>
 						</tr>
 					</tfoot>
 				</table>

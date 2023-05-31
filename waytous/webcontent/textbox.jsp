@@ -1,21 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<title>WayToUs<%=request.getParameter("u_id") %></title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+<title>WayToUs<%=request.getParameter("u_id")%></title>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<noscript>
+	<link rel="stylesheet" href="assets/css/noscript.css" />
+</noscript>
 </head>
 <body class="is-preload">
 
 	<!-- Header -->
 	<header id="header">
-		<a href="index.html" class="title">Title</a>
+		<a href="index.html" class="title">WayToUs</a>
 		<nav>
 			<ul>
 				<li><a href="index.html">Home</a></li>
@@ -31,43 +32,35 @@
 		<!-- Main -->
 		<section id="main" class="wrapper">
 			<div class="inner">
-				<table>
-					<thead>
-						<tr>
-							<th>번호</th>
-							<th>제목</th>
-							<th>작성자</th>
-							<th>작성일</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>3</td>
-							<td>0504일산호수공원일정입니다. 확인해주세요</td>
-							<td>경근쓰</td>
-							<td>0000-00-00</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>안 미웡!</td>
-							<td>지은쓰</td>
-							<td>0000-00-00</td>
-						</tr>
-						<tr>
-							<td>1</td>
-							<td> 미 웡 !</td>
-							<td>지은쓰</td>
-							<td>0000-00-00</td>
-						</tr>
+					<section>
+					<h2>글 쓰기</h2>
+					<form method="post" action="postbox.jsp">
+						<div class="row gtr-uniform">
+						
+							<div class="col-6 col-12-xsmall">
+								<input type="text" name="u_title" id="u_title" value=""
+									placeholder="제목" />
+							</div>
+							<div class="col-6 col-12-xsmall" >
+								<input type="text" name="u_auther" id="u_auther" value=""
+									placeholder="작성자" />
+							</div>
+						
+							<div class="col-12">
+								<textarea name="demo-message" id="demo-message"
+									placeholder="Enter your message" rows="6"></textarea>
+							</div>
+							<div class="col-12" style="display: flex; justify-content: right;">
+								<ul class="actions">
+									<li><input type="submit" value="Send Message"
+										class="primary" /></li>
+									
+								</ul>
+							</div>
+						</div>
+					</form>
+				</section>
 
-					</tbody>
-					<tfoot>
-						<tr>
-							<td colspan="3"></td>
-							<td><a href="#" class="button">글쓰기</a></td>
-						</tr>
-					</tfoot>
-				</table>
 			</div>
 		</section>
 
