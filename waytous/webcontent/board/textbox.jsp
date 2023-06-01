@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+<%
+String u_id =  (String)session.getAttribute("u_id");
+
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +19,7 @@
 <body class="is-preload">
 
 	<!-- Header -->
-	<jsp:include page="../common/generic_header.jsp"/>
+	<jsp:include page="../common/board_header.jsp"/>
 
 	<!-- Wrapper -->
 	<div id="wrapper">

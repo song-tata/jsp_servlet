@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-
+<%
+String u_id =  (String)session.getAttribute("u_id");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +20,7 @@
 
 	<!-- Header -->
 	<header id="header">
-		<a href="../postbox.jsp" class="title">WayToUs</a>
+		<a href="../postbox.jsp" class="title">WayToUs-<%=u_id %></a>
 		<nav>
 			<ul>
 				<li><a href="index.html">Home</a></li>

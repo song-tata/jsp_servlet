@@ -1,20 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
-
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<title>WayToUs</title>
-<meta charset="utf-8" />
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="../assets/css/main.css" />
-<noscript>
-	<link rel="stylesheet" href="../assets/css/noscript.css" />
-</noscript>
-
+<meta charset="EUC-KR">
+<title>Insert title here</title>
 </head>
 <body class="is-preload">
+
 	<!-- Sidebar -->
 	<section id="sidebar">
 		<div class="inner">
@@ -29,8 +22,5 @@
 		</div>
 	</section>
 
-	
-
 </body>
-
 </html>
