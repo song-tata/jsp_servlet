@@ -161,7 +161,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 	
 	
-      <Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\waytous" path="/waytous" reloadable="true" source="org.eclipse.jst.jee.server:waytous"/></Host>
+      <Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\waytous" path="/waytous" reloadable="true" source="org.eclipse.jst.jee.server:waytous"/><Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\chap16-1" path="/chap16-1" reloadable="true" source="org.eclipse.jst.jee.server:chap16-1"/><Context docBase="C:\test_server\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\JDBC" path="/JDBC" reloadable="true" source="org.eclipse.jst.jee.server:JDBC"/></Host>
     </Engine>
   </Service>
 </Server>

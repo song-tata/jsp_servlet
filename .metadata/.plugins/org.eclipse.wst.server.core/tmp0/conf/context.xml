@@ -24,12 +24,12 @@
 	<Resource maxWait="-1" maxIdle="20" maxActive="100"
 		auth="Container" name="jdbc/mysql" type="javax.sql.DataSource"
 		driverClassName="com.mysql.jdbc.Driver" username="root"
-		password="0000" url="jdbc:mysql://localhost:3306/my_db"/>
+		password="0000" url="jdbc:mysql://localhost:3306/waytous"/>
 
  <!--	<Resource maxWait="-1" maxIdle="20" maxActive="100"
 		auth="Container" name="jdbc/mysql" type="javax.sql.DataSource"
 		driverClassName="com.mysql.jdbc.Driver" username="root"
-		password="0000" url="jdbc:mysql://localhost:3306/madang"/>
+		password="0000" url="jdbc:mysql://localhost:3306/mysns"/>
 		-->
 
 </Context>

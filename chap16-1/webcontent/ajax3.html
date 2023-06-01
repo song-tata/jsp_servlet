@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+	function trans() {
+		$.ajax({
+			type:"post",
+			async : false,
+			url: "http://localhost:8090/chap16-1/ajax2",
+			dataType:"xml",// 데이터를 xml형식으로 전달받겠다
+			success:function(data,textStatus){
+				$(data).find("racoon").each(function() {
+					let name = $(this).find("name").text();// 전송된 xml파일에서 항목을 찾는 것	
+					let second = $(this).find("text").text();
+					let image = $(this).find("img").text();
+					
+					$("#racoon").append(
+							"<h3>"+name+"</h3>"+
+							"<p>"+second+"</p>"+
+							"<img src='"+image+"'>"
+					);
+				});
+			},
+			error:function(data,textStatus){
+				alert("에러발생")
+			},
+			complete:function(data,textStatus){
+				alert("작업완료"+textStatus)
+			}
+		});		
+	}
+</script>
+</head>
+<body>
+	
+	<input type="button" value="서버전송" onclick="trans()">
+	
+	<div id="racoon"></div>
+</body>
+</html>
